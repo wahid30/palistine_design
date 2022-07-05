@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* for all buttons */
+button {
+  background-color: #ff5959;
+  padding: 10px 20px;
+  border: 1px solid #ff5959;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #db2929dc;
+}
+
+/* For all h2 tags */
+h2 {
+  font-size: 35px;
+  font-weight: 900;
+}
+
+/* Section 01 : header area */
+.header-area {
+  text-align: center;
+  padding: 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), #000),
+    url(./images/donation13.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+}
+
+.header-area h1 {
+  font-size: 70px;
+  font-weight: 400;
+  margin-top: 250px;
+}
+
+.header-article {
+  margin-top: 20px;
+}
+
+/* Section 02 : donate-today-area */
+
+.donate-today-area {
+  padding: 100px;
+  text-align: center;
+}
+
+.banking {
+  display: flex;
+  justify-content: center;
+}
+
+.donate-article {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ammount {
+  font-size: 25px;
+  border: 1px solid #fafafa;
+  padding: 30px 15px;
+  margin: 20px 20px;
+  background-color: #fafafa;
+  color: #858585;
+  border-radius: 4px;
+}
+
+.suggested-ammount {
+  border: 1px solid #ff5959;
+  color: #ff5959;
+  background-color: #ffeeee;
+}
+
+.donate-submit input {
+  border: none;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  width: 40%;
+  margin-bottom: 20px;
+}
