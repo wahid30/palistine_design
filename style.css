@@ -17,10 +17,31 @@ button:hover {
   background-color: #db2929dc;
 }
 
+/* For all p tags */
+p {
+  font-family: "Arima", cursive;
+}
+
+/* For all h1 tags */
+h1 {
+  font-family: "Bebas Neue", cursive;
+}
+
 /* For all h2 tags */
 h2 {
   font-size: 35px;
   font-weight: 900;
+  font-family: "Gentium Book Plus", serif;
+}
+
+/* For all h3 tags */
+h3 {
+  font-family: "Raleway", sans-serif;
+}
+
+/* For all h6 tags */
+h6 {
+  font-family: "Raleway", sans-serif;
 }
 
 /* All Flexible area and flexible article*/
@@ -57,7 +78,6 @@ h2 {
 }
 
 /* Section 02 : donate-today-area */
-
 .donate-today-area {
   padding: 100px;
   text-align: center;
@@ -87,7 +107,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* section 04:  donate-plan */
+/* section 03:  donate-plan */
 .donate-plan-area {
   padding: 10px 370px;
   text-align: center;
@@ -96,7 +116,7 @@ h2 {
 .donate-sectors {
   padding: 30px 15px;
   margin: 20px 10px;
-  border-radius: 2px;
+  border-radius: 4px;
   text-align: left;
 }
 
@@ -126,17 +146,52 @@ h2 {
   background-color: #fff4d6;
 }
 
+/* Section 04: contribute-area */
+.contribute-area {
+  margin: 30px 280px;
+}
+.contribute-article {
+  width: 50%;
+  margin: 50px;
+}
+
+.contribute-article img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.contribute-article img:hover {
+  width: 110%;
+  height: 110%;
+  transition: 0.8s;
+}
+
+.contribute-texts {
+  margin-bottom: 30px;
+}
+.contribute-contents {
+  padding: 50px;
+}
+
+.contribute-contents:hover {
+  box-shadow: 10px 10px 10px gray;
+  transition: 0.7s;
+  border-radius: 5px;
+}
+
 /* section 05: update-area*/
 .update-area {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 100px;
+  font-family: "Raleway", sans-serif;
 }
 
 .form-area {
   border: 1px solid #04aa6d;
-  border-radius: 15px;
-  margin: 20px 300px;
+  border-radius: 10px;
+  margin: 25px 300px;
   padding: 20px;
   background: linear-gradient(#04aa6d, #426458);
   color: white;
@@ -164,7 +219,7 @@ select {
   color: white;
   cursor: pointer;
   margin-top: 20px;
-  margin-right: 320px;
+  margin-right: 330px;
 }
 
 .submit:hover {
@@ -172,7 +227,6 @@ select {
 }
 
 /* Section 06: footer area */
-
 .footer-area {
   background-color: #0b0d17;
   height: 15vh;
