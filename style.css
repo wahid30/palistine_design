@@ -126,6 +126,51 @@ h2 {
   background-color: #fff4d6;
 }
 
+/* section 05: update-area*/
+.update-area {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+
+.form-area {
+  border: 1px solid #04aa6d;
+  border-radius: 15px;
+  margin: 20px 300px;
+  padding: 20px;
+  background: linear-gradient(#04aa6d, #426458);
+  color: white;
+}
+
+.input-labels {
+  margin: 10px 50px;
+  font-size: 20px;
+}
+
+.text-area {
+  border: 1px solid #04aa6d;
+  border-radius: 5px;
+}
+
+select {
+  padding: 0px 52px;
+}
+
+.submit {
+  background-color: #db4376;
+  padding: 10px 20px;
+  border: 1px solid #db4376;
+  border-radius: 7px;
+  color: white;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-right: 320px;
+}
+
+.submit:hover {
+  background-color: #f1296c;
+}
+
 /* Section 06: footer area */
 
 .footer-area {
