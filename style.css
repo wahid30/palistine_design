@@ -23,6 +23,16 @@ h2 {
   font-weight: 900;
 }
 
+/* All Flexible area and flexible article*/
+.flexible {
+  display: flex;
+  justify-content: center;
+}
+.flexible-article {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 /* Section 01 : header area */
 .header-area {
   text-align: center;
@@ -53,16 +63,6 @@ h2 {
   text-align: center;
 }
 
-.banking {
-  display: flex;
-  justify-content: center;
-}
-
-.donate-article {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 .ammount {
   font-size: 25px;
   border: 1px solid #fafafa;
@@ -85,4 +85,61 @@ h2 {
   border-bottom: 1px solid gray;
   width: 40%;
   margin-bottom: 20px;
+}
+
+/* section 04:  donate-plan */
+.donate-plan-area {
+  padding: 10px 370px;
+  text-align: center;
+}
+
+.donate-sectors {
+  padding: 30px 15px;
+  margin: 20px 10px;
+  border-radius: 2px;
+  text-align: left;
+}
+
+.donate-sectors img {
+  margin: 10px 1px;
+}
+
+.donate-sectors h3 {
+  margin: 10px 1px;
+}
+
+.donate-sectors p {
+  color: #858585;
+  margin: 10px 1px;
+}
+
+.food-sector {
+  border: 1px solid #edf5f6;
+  background-color: #edf5f6;
+}
+.shelter-sector {
+  border: 1px solid #ffeeee;
+  background-color: #ffeeee;
+}
+.education-sector {
+  border: 1px solid #fff4d6;
+  background-color: #fff4d6;
+}
+
+/* Section 06: footer area */
+
+.footer-area {
+  background-color: #0b0d17;
+  height: 15vh;
+  text-align: center;
+  color: white;
+}
+
+.footer-area h3 {
+  padding-top: 30px;
+  color: #ff5959;
+}
+
+.footer-area h6 {
+  padding-top: 20px;
 }
