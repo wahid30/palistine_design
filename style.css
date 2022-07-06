@@ -22,6 +22,12 @@ p {
   font-family: "Arima", cursive;
 }
 
+/* For all a tag*/
+a {
+  text-decoration: none;
+  color: #858585;
+}
+
 /* For all h1 tags */
 h1 {
   font-family: "Bebas Neue", cursive;
@@ -89,7 +95,6 @@ h6 {
   padding: 30px 15px;
   margin: 20px 20px;
   background-color: #fafafa;
-  color: #858585;
   border-radius: 4px;
 }
 
