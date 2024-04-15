@@ -60,12 +60,25 @@ h6 {
   margin-bottom: 20px;
 }
 
+.color-white {
+  color: white;
+}
+
+.header-area-for-logform {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), #000),
+    url(./images/donation13.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
 /* Section 01 : header area */
 .header-area {
   text-align: center;
   padding: 100px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), #000),
-    url(./images/donation13.jpg);
+    url(./images/donation13.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -96,6 +109,7 @@ h6 {
   margin: 20px 20px;
   background-color: #fafafa;
   border-radius: 4px;
+  color: black;
 }
 
 .suggested-ammount {
@@ -185,6 +199,11 @@ h6 {
   border-radius: 5px;
 }
 
+/* .contribute-center {
+  display: flex;
+  justify-content: center;
+} */
+
 /* section 05: update-area*/
 .update-area {
   text-align: center;
@@ -246,4 +265,43 @@ select {
 
 .footer-area h6 {
   padding-top: 20px;
+}
+
+.logout-form {
+  color: red;
+}
+
+.nav-content {
+  font-size: 25px;
+}
+
+.nav-content-login {
+  font-size: 25px;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 10%;
+}
+
+.custom-border {
+  border-right: 1px solid black;
+}
+
+.custom-center {
+  text-align: center;
+}
+
+.custom-blur {
+  filter: blur(8px);
+}
+
+.artical-custom-edit {
+  color: white;
+  font-size: 18px;
+}
+
+.theme-flex {
+  display: flex;
+
+  justify-items: center;
+  gap: 10px;
 }

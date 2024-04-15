@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cupcake">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate Web</title>
+    <link rel="stylesheet" href="./style.css" />
     <link
-      rel="shortcut icon"
-      href="./images/Donate-Button.png"
-      type="image/x-icon"
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.3/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
     />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="shortcut icon" href="./images/Logo.jpg" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,172 +38,970 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- navigation bar  -->
+    <div class="navbar bg-base-100 p-10">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li><a class="nav-content" href="./index.html">Home</a></li>
+            <li><a class="nav-content">Causes</a></li>
+            <li><a class="nav-content">Give</a></li>
+            <li><a class="nav-content">Pages</a></li>
+            <li>
+              <a class="nav-content">Events</a>
+              <ul class="p-2">
+                <li><a class="nav-content">Food</a></li>
+                <li><a class="nav-content">Shelter</a></li>
+                <li><a class="nav-content">Medical</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-content">News</a></li>
+            <li><a class="nav-content">About Us</a></li>
+            <li><a class="nav-content">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="avatar">
+          <div
+            class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
+          >
+            <a href="./index.html"><img src="./images/Logo.jpg" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a class="nav-content" href="./index.html">Home</a></li>
+          <li><a class="nav-content">Causes</a></li>
+          <li><a class="nav-content">Give</a></li>
+          <li><a class="nav-content">Pages</a></li>
+          <li>
+            <details>
+              <summary class="nav-content">Events</summary>
+              <ul class="p-2">
+                <li><a class="nav-content">Food</a></li>
+                <li><a class="nav-content">Shelter</a></li>
+                <li><a class="nav-content">Medical</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a class="nav-content">News</a></li>
+          <li><a class="nav-content">About Us</a></li>
+          <li><a class="nav-content">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end theme-flex">
+        <a href="./login.html"
+          ><button class="header-article p-5 text-3xl">Login</button></a
+        >
+        <label class="swap swap-rotate">
+          <!-- this hidden checkbox controls the state -->
+          <input type="checkbox" class="theme-controller" value="synthwave" />
+
+          <!-- sun icon -->
+          <svg
+            class="swap-off fill-current w-10 h-10"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z"
+            />
+          </svg>
+
+          <!-- moon icon -->
+          <svg
+            class="swap-on fill-current w-10 h-10"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z"
+            />
+          </svg>
+        </label>
+      </div>
+    </div>
+
     <!-- Section 01 : header area  -->
     <section class="header-area">
-      <h1 class="header-article">
+      <h1 class="text-6xl py-16">
         Let's help them who<br />
         need help
       </h1>
-      <p class="header-article">
+      <p class="header-article text-3xl">
         A single help can safe at least a single family. <br />
         So please come to help them.
       </p>
-      <button class="header-article">Donate Now</button>
+      <button class="header-article p-5 text-3xl">Donate Now</button>
     </section>
 
-    <!-- Section 02 : donate-today-area -->
+    <!-- section 02: clean water,education, healthy food -->
+    <div
+      class="my-10 p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5"
+    >
+      <div class="card bg-base-100 shadow-xl">
+        <figure>
+          <img src="./images/section 02/water.avif" alt="Shoes" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Clean Water</h2>
+          <p class="font-bold">
+            "Access to clean water is a fundamental human right that should be
+            guaranteed for all people, including those in Palestine. Every
+            individual deserves access to safe and clean drinking water to live
+            a healthy and dignified life. It's imperative for governments,
+            organizations, and individuals to come together to address the water
+            crisis in Palestine and work towards sustainable solutions. Let's
+            advocate, support, and take action to ensure that clean water
+            becomes a reality for every Palestinian community."
+          </p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Continue</button>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-xl">
+        <figure>
+          <img src="./images/section 02/education.jpg" alt="Shoes" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Educations</h2>
+          <p class="font-bold">
+            "Education is the key to empowerment and progress for Palestine. By
+            investing in education, we invest in the future of our nation. Let
+            us prioritize building schools, providing quality education, and
+            fostering an environment where every Palestinian child has the
+            opportunity to learn, grow, and achieve their full potential.
+            Education is not just a right; it is a pathway to a brighter, more
+            prosperous future for all Palestinians. Together, let's build a
+            stronger, more educated Palestine."
+          </p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Continue</button>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-xl">
+        <figure>
+          <img src="./images/section 02/food.jpg" alt="Shoes" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Healthy Food</h2>
+          <p class="font-bold">
+            "Embrace the richness of Palestine's culinary heritage by nourishing
+            your body with wholesome, locally sourced ingredients. Let every
+            meal be a celebration of health, flavor, and tradition. Remember, by
+            choosing fresh fruits, vegetables, whole grains, and lean proteins,
+            you not only honor your heritage but also support your well-being.
+            Together, let's cultivate a culture of vitality and strength through
+            the power of nutritious, delicious food. Your health is your
+            greatest asset, so savor each bite and thrive!"
+          </p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Continue</button>
+          </div>
+        </div>
+      </div>
+      <div class="card bg-base-100 shadow-xl">
+        <figure>
+          <img src="./images/section 02/shelter.jpg" alt="Shoes" />
+        </figure>
+        <div class="card-body">
+          <h2 class="card-title">Shelter</h2>
+          <p class="font-bold">
+            In times of crisis, solidarity becomes our greatest strength. The
+            people of Palestine are enduring immense hardships, including the
+            urgent need for shelter and food security. As fellow global
+            citizens, it's our responsibility to stand with them in their time
+            of need. Let's join hands and provide critical support for shelter
+            and food aid in Palestine. Every contribution, big or small, makes a
+            significant difference in alleviating suffering and restoring hope.
+            Together, we can make a tangible impact and show solidarity with
+            those facing adversity. Donate today to organizations dedicated to
+            providing shelter and food assistance in Palestine. Your generosity
+            will help rebuild lives and communities, bringing comfort and relief
+            to those who need it most. Together, let's stand for humanity and
+            extend our support to our brothers and sisters in Palestine. Thank
+            you for your compassion and generosity
+          </p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- section 03: about rise hands -->
+    <div>
+      <div class="hero bg-base-200">
+        <div class="hero-content flex-col lg:flex-row flex gap-7">
+          <img
+            src="./images/section 03/2500.jpeg"
+            class="max-w-xl rounded-lg shadow-2xl"
+          />
+          <div>
+            <h1 class="text-5xl font-bold">About Risehands</h1>
+            <p class="py-6 text-xl font-bold">
+              Helping is Great Virtue for Every Human’s
+            </p>
+            <p class="py-6 text-xl">
+              It has been determined through research that when we feel to help,
+              and that someone authentically needs our assistance, and that no
+              trick is being played on us, we reliably do intervene.
+              Interestingly, it has been found that we are less likely to help
+              an examination of the intrinsic worth of helping others,
+              transcending cultural, religious, and societal boundaries.
+            </p>
+            <div class="flex gap-5">
+              <ul class="steps steps-vertical">
+                <li class="step step-primary">Charity For Education</li>
+                <li class="step step-primary">Charity For Medical Health</li>
+                <li class="step step-primary">Charity For Clean Water</li>
+              </ul>
+              <ul class="steps steps-vertical">
+                <li class="step step-primary">Charity For Pets</li>
+                <li class="step step-primary">Charity For Education</li>
+                <li class="step step-primary">Charity For Church</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 04 : donate-today-area -->
     <section class="donate-today-area">
-      <h2 class="donate-article">Donate Today</h2>
-      <p class="donate-article">
+      <h2 class="text-4xl">Donate Today</h2>
+      <p class="text-xl font-bold mt-5">
         You can donate in some different formate. <br />
         nogot, bKash, rocket, visa card, paypal.
       </p>
       <div class="flexible-article flexible">
-        <div class="ammount">
+        <div class="ammount font-bold">
           <h3><a href="#">100tk</a></h3>
         </div>
-        <div class="ammount suggested-ammount">
+        <div class="ammount suggested-ammount font-bold">
           <h3><a href="#">200tk</a></h3>
         </div>
-        <div class="ammount">
+        <div class="ammount font-bold">
           <h3><a href="#">500tk</a></h3>
         </div>
-        <div class="ammount">
+        <div class="ammount font-bold">
           <h3><a href="#">1000tk</a></h3>
         </div>
-        <div class="ammount">
+        <div class="ammount font-bold">
           <h3><a href="#">5000tk</a></h3>
         </div>
       </div>
       <div class="donate-submit">
-        <input type="number" placeholder="Other Amount(Taka)" />
+        <input
+          class="p-5 font-bold"
+          type="number"
+          placeholder="Other Amount(Taka)"
+        />
         <br />
-        <button>Donate Now</button>
+        <p class="btn btn-info font-bold">Donate Now</p>
       </div>
     </section>
 
-    <!-- section 03:  donate-plan -->
-    <section class="donate-plan-area">
-      <h2>Our Donate Plan</h2>
-      <p>
+    <!-- section 05: stat 
+     -->
+    <div>
+      <div
+        class="shadow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-9/12 mx-auto my-10 gap-5"
+      >
+        <div class="stat custom-border">
+          <div class="stat-value text-5xl">35+</div>
+          <div class="stat-title font-bold">Years of Fundation</div>
+          <div class="stat-desc font-bold">Jan 1st - Feb 1st</div>
+        </div>
+        <div class="stat custom-border">
+          <div class="stat-value text-5xl">68+</div>
+          <div class="stat-title font-bold">Monthly Donate</div>
+          <div class="stat-desc font-bold">↗︎ 400 (22%)</div>
+        </div>
+        <div class="stat custom-border">
+          <div class="stat-value text-5xl">8k+</div>
+          <div class="stat-title font-bold">Global Partners</div>
+          <div class="stat-desc font-bold">↘︎ 90 (14%)</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value text-5xl">93+</div>
+          <div class="stat-title font-bold">Project Complete</div>
+          <div class="stat-desc font-bold">↗︎ 70 (25%)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- section 06: diff  -->
+    <div class="w-9/12 mx-auto my-10 pt-10">
+      <h1 class="font-bold text-5xl custom-center">
+        Each donation is an essential help for everyone's life
+      </h1>
+      <div class="my-10 p-10">
+        <div class="diff aspect-[16/9]">
+          <div class="diff-item-1">
+            <div
+              class="text-primary-content text-9xl font-black grid place-content-center"
+            >
+              <img
+                class="custom-blur"
+                src="./images/section 06/SV1.webp"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="diff-item-2">
+            <div class="text-9xl font-black grid place-content-center">
+              <img src="./images/section 06/edited.webp" alt="" />
+            </div>
+          </div>
+          <div class="diff-resizer"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- section 07: testimonials  -->
+    <div class="w-9/12 mx-auto my-10">
+      <div class="custom-center">
+        <h1 class="font-bold text-6xl my-4">Testimonials</h1>
+        <h1 class="font-bold text-4xl">
+          What Our People’s Say About Risehands
+        </h1>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+        <div
+          class="card bg-base-100 shadow-xl hover:bg-sky-400 hover:ring-sky-400"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold text-4xl">Amelia Rodriguez</h2>
+            <p class="font-bold text-xl">
+              "Donating through your website was such a seamless experience. I
+              appreciate how user-friendly and secure the process was. Keep up
+              the great work!"
+            </p>
+          </div>
+        </div>
+        <div
+          class="card bg-base-100 shadow-xl hover:bg-sky-400 hover:ring-sky-400"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold text-4xl">Benjamin Chang</h2>
+            <p class="font-bold text-xl">
+              "I'm glad I stumbled upon your donation page. It's heartening to
+              see transparency in how my donation will be utilized. Thank you
+              for making it clear and concise."
+            </p>
+          </div>
+        </div>
+        <div
+          class="card bg-base-100 shadow-xl hover:bg-sky-400 hover:ring-sky-400"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold text-4xl">Sophia Patel</h2>
+            <p class="font-bold text-xl">
+              "I've donated to several causes before, but your website stood out
+              to me because of the impact stories shared. It's inspiring to see
+              how my contribution can make a difference. I'll definitely be
+              donating again in the future."
+            </p>
+          </div>
+        </div>
+        <div
+          class="card bg-base-100 shadow-xl hover:bg-sky-400 hover:ring-sky-400"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold text-4xl">Elijah Nguyen</h2>
+            <p class="font-bold text-xl">
+              "Your website not only made it easy for me to donate, but it also
+              educated me on the issue at hand. I appreciate the effort put into
+              raising awareness and providing resources for further learning.
+              Keep spreading awareness!"
+            </p>
+          </div>
+        </div>
+        <div
+          class="card bg-base-100 shadow-xl hover:bg-sky-400 hover:ring-sky-400"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold text-4xl">Isabella Smith</h2>
+            <p class="font-bold text-xl">
+              "As a frequent online donor, I value websites that prioritize
+              security and privacy. I felt confident donating through your
+              platform, knowing my information was safe. Thank you for
+              prioritizing user trust."
+            </p>
+          </div>
+        </div>
+        <div
+          class="card bg-base-100 shadow-xl hover:bg-sky-400 hover:ring-sky-400"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold text-4xl">Noah Khan</h2>
+            <p class="font-bold text-xl">
+              "The donation process was straightforward, but what really
+              impressed me was the prompt acknowledgment and gratitude received
+              afterward. It's refreshing to see genuine appreciation for every
+              contribution. Kudos to your team!"
+            </p>
+          </div>
+        </div>
+        <div
+          class="card bg-base-100 shadow-xl hover:bg-sky-400 hover:ring-sky-400"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold text-4xl">Olivia Garcia</h2>
+            <p class="font-bold text-xl">
+              "Your website's design and layout made it easy for me to navigate
+              and understand where my donation would be directed. It's
+              refreshing to encounter a user-friendly platform that prioritizes
+              clarity and simplicity. Well done!"
+            </p>
+          </div>
+        </div>
+        <div
+          class="card bg-base-100 shadow-xl hover:bg-sky-400 hover:ring-sky-400"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold text-4xl">Liam Kim</h2>
+            <p class="font-bold text-xl">
+              "I've donated to various causes over the years, but your website
+              provided a sense of connection and community. The personal stories
+              and testimonials shared added depth to the cause and motivated me
+              to contribute. Thank you for creating such an engaging platform."
+            </p>
+          </div>
+        </div>
+        <div
+          class="card bg-base-100 shadow-xl hover:bg-sky-400 hover:ring-sky-400"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold text-4xl">Ava Johnson</h2>
+            <p class="font-bold text-xl">
+              "Thank you for offering multiple payment options on your donation
+              page. It made the process convenient and accessible for donors
+              like me. Keep up the inclusive approach!"
+            </p>
+          </div>
+        </div>
+        <div
+          class="card bg-base-100 shadow-xl hover:bg-sky-400 hover:ring-sky-400"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold text-4xl">William Ali</h2>
+            <p class="font-bold text-xl">
+              "Donating through your website was such a seamless experience. I
+              appreciate how user-friendly and secure the process was. Keep up
+              the great work!"
+            </p>
+          </div>
+        </div>
+        <div
+          class="card bg-base-100 shadow-xl hover:bg-sky-400 hover:ring-sky-400"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold text-4xl">Rifa Noor</h2>
+            <p class="font-bold text-xl">
+              "I appreciate the regular updates and impact reports sent by your
+              organization post-donation. It's reassuring to see the tangible
+              outcomes of my contribution. Your transparency and accountability
+              set a high standard for online giving."
+            </p>
+          </div>
+        </div>
+        <div
+          class="card bg-base-100 shadow-xl hover:bg-sky-400 hover:ring-sky-400"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold text-4xl">Imtiaz Raihan</h2>
+            <p class="font-bold text-xl">
+              "Your website's commitment to accessibility sets a shining example
+              for online platforms. The inclusion of features like
+              text-to-speech and language translation ensures that everyone can
+              participate in supporting the cause. Kudos to your team for
+              fostering inclusivity!"
+            </p>
+          </div>
+        </div>
+        <div
+          class="card bg-base-100 shadow-xl hover:bg-sky-400 hover:ring-sky-400"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold text-4xl">Forhad Uddin</h2>
+            <p class="font-bold text-xl">
+              "I was impressed by the range of causes and projects featured on
+              your website. It's fantastic to see such diverse initiatives being
+              supported. I felt empowered knowing I could choose where my
+              donation would make the most impact."
+            </p>
+          </div>
+        </div>
+        <div
+          class="card bg-base-100 shadow-xl hover:bg-sky-400 hover:ring-sky-400"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold text-4xl">Morshed</h2>
+            <p class="font-bold text-xl">
+              "Your website's dedication to donor privacy and confidentiality is
+              commendable. I appreciate the option to donate anonymously and the
+              assurance that my personal information will be protected. Thank
+              you for prioritizing donor trust."
+            </p>
+          </div>
+        </div>
+        <div
+          class="card bg-base-100 shadow-xl hover:bg-sky-400 hover:ring-sky-400"
+        >
+          <div class="card-body">
+            <h2 class="card-title font-bold text-4xl">SM Abdullah</h2>
+            <p class="font-bold text-xl">
+              "I've donated to many organizations in the past, but your
+              website's interactive features made the experience memorable. From
+              progress trackers to virtual tours of project sites, every detail
+              brought the cause to life. Thank you for engaging donors in such a
+              meaningful way."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- section 08:  donate-plan -->
+    <!-- <section class="donate-plan-area">
+      <h2 class="text-4xl">Our Donate Plan</h2>
+      <p class="text-xl mt-2">
         Here are the donation plans in different regions and at different
         levels. <br />So you can donate to any one of the parts you like.
       </p>
       <div class="flexible-article flexible">
         <div class="donate-sectors food-sector">
           <img src="./icons/food.png" alt="" />
-          <h3>Food for a family</h3>
-          <p>
+          <h3 class="font-bold text-2xl">Food for a family</h3>
+          <p class="text-xl font-bold">
             Many families are suffering from this flood, so one help from you is
             enough in their situation.
           </p>
         </div>
         <div class="donate-sectors shelter-sector">
           <img src="./icons/shelter.png" alt="" />
-          <h3>Shelter for a family</h3>
-          <p>
+          <h3 class="font-bold text-2xl">Shelter for a family</h3>
+          <p class="text-xl font-bold">
             When you apply for shelter, you will meet with a diversion worker
             who try to help avoid shelter.
           </p>
         </div>
         <div class="donate-sectors education-sector">
           <img src="./icons/icon6.svg" alt="" />
-          <h3>Education for a child</h3>
-          <p>
+          <h3 class="font-bold text-2xl">Education for a child</h3>
+          <p class="text-xl font-bold">
             ducation plays a pivotal role in a child’s life as it helps them to
             think and analyze critically.
           </p>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <!-- Section 04: contribute-area -->
-    <section class="contribute-area">
-      <div class="flexible">
-        <div class="contribute-article contribute-contents">
-          <h2 class="contribute-texts">Their lives depend on your donation</h2>
-          <p class="contribute-texts">
-            “Blood donations save lives and King and Mesiah are proof of that,”
-            Andrea Cefarelli, the center’s senior executive director, aid in a
-            statement that urged people to donate <br />
-            <br />
-            sand gave them proof that their donations are producing tangible
-            results — they are saving lives.
-          </p>
-          <button class="contribute-texts">How to Contribute?</button>
+    <!-- section 09: Articles news and blogs  -->
+    <div class="w-9/12 mx-auto my-10 custom-center">
+      <div>
+        <h1 class="font-bold text-5xl">All our latest news and updates</h1>
+        <h1 class="font-bold text-2xl my-2">
+          Donec pellentesque nunc sed neque congue, ut lobortis odio
+          sollicitudin. Curabitur orci orci, maximus nec sodales vitae,
+          tristique
+        </h1>
+      </div>
+      <div class="my-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div>
+          <div class="h-96 carousel carousel-vertical rounded-box">
+            <div class="carousel-item h-full">
+              <div class="card bg-base-100 shadow-xl image-full">
+                <figure>
+                  <img src="./images/section 10/001.jpg" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <p class="artical-custom-edit">
+                    Palestinians in Jails End Hunger Strike
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item h-full">
+              <div class="card bg-base-100 shadow-xl w-full">
+                <div class="card-body">
+                  <p class="font-bold">
+                    JERUSALEM — Hundreds of Palestinian <br />
+                    prisoners in Israeli jails ended a hunger strike<br />
+                    on Monday that had lasted for weeks,<br />
+                    signing an agreement with the Israeli authorities<br />
+                    that promised improved conditions, according<br />
+                    to officials. The end of the strike calmed fears<br />
+                    of widespread unrest in the event of a prisoner’s death.
+                  </p>
+                  <div class="card-actions justify-center">
+                    <a
+                      target="_blank"
+                      href="http://www.nytimes.com/2012/05/15/world/middleeast/deal-to-end-hunger-strike-awaits-palestinian-prisoners-approval.html"
+                      class="btn btn-primary"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="contribute-article">
-          <img src="./images/donation2.jpg" alt="" />
+        <div>
+          <div class="h-96 carousel carousel-vertical rounded-box">
+            <div class="carousel-item h-full">
+              <div class="card bg-base-100 shadow-xl image-full">
+                <figure>
+                  <img src="./images/section 10/002.jpg" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <p class="artical-custom-edit">
+                    Palestinian Refugee Camp Attacked by ISIS
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item h-full">
+              <div class="card bg-base-100 shadow-xl w-full">
+                <div class="card-body">
+                  <p class="font-bold">
+                    A few miles outside of Damascus, Syria, <br />
+                    the Yarmouk refugee camp for Palestinians has come<br />
+                    under fire from the self-proclaimed<br />
+                    Islamic State. Over the weekend, about 2,000 people
+                    managed<br />
+                    to flee after two exits were opened, but <br />Palestinian
+                    officials report that ISIS<br />
+                    has control of 60 percent of the camp.<br />
+                    As many as 18,000 civilians remain trapped.<br />Weighing in
+                    on the situation is Christopher <br />Gunness, a spokesman
+                    for the United Nations<br />
+                    Relief and Works Agency for Palestine Refugees.
+                  </p>
+                  <div class="card-actions justify-center">
+                    <a
+                      target="_blank"
+                      href="https://www.wnycstudios.org/podcasts/takeaway/segments/palestinian-refugee-camp-attacked-isis"
+                      class="btn btn-primary"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="h-96 carousel carousel-vertical rounded-box">
+            <div class="carousel-item h-full">
+              <div class="card bg-base-100 shadow-xl image-full">
+                <figure>
+                  <img src="./images/section 10/003.jpg" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                  <p class="artical-custom-edit">
+                    Canada declares opposition to alleged Israeli war crimes
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item h-full">
+              <div class="card bg-base-100 shadow-xl w-full">
+                <div class="card-body">
+                  <p class="font-bold">
+                    CANADA has written to the International <br />
+                    Criminal Court (ICC) opposing investigations <br />
+                    into alleged Israeli war crimes in Palestine, following
+                    pressure <br />
+                    from Benjamin Netanyahu. <br />
+                    The letter outlining the Canadian <br />
+                    position was sent to the court on February 14, but its
+                    contents <br />
+                    were only made public today.
+                  </p>
+                  <div class="card-actions justify-center">
+                    <a
+                      target="_blank"
+                      href="https://morningstaronline.co.uk/article/w/canada-declares-opposition-to-alleged-israeli-war-crimes-investigation"
+                      class="btn btn-primary"
+                      >Read More</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="flexible">
-        <div class="contribute-article">
-          <img src="./images/donation3.jpg" alt="" />
-        </div>
-        <div class="contribute-article contribute-contents">
-          <h2 class="contribute-texts">They need us to suvive</h2>
-          <p class="contribute-texts">
-            This is wonderful and important. But it's also striking how, for the
-            first time while a major climate event is still going on, so many
-            conversations are <br />
-            <br />
-            already turning towards the need for change as well as the need to
-            help right now.
-          </p>
-          <button class="contribute-texts">Having Trubble?</button>
-        </div>
-      </div>
-    </section>
+    </div>
 
-    <!-- section 05: update-area -->
-    <section class="update-area">
-      <h2>Get My Updates</h2>
-      <p>
-        if you have any questions or issues <br />
-        you can mail us
-      </p>
-      <div class="form-area">
-        <div>
-          <label class="input-labels" for="name">Name :</label>
-          <input
-            class="input-labels text-area"
-            type="text"
-            placeholder="Your name"
-          />
+    <!-- section 10: about us -->
+    <div class="w-9/12 mx-auto my-10 custom-center">
+      <div class="my-10">
+        <h1 class="font-bold text-5xl">About Us</h1>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="card bg-base-100 shadow-xl">
+          <figure class="flex flex-col gap-2">
+            <div class="avatar online">
+              <div class="w-24 rounded-full">
+                <img src="./images/About Us/wahid.png" />
+              </div>
+            </div>
+            <h2 class="card-title">Wahidul Alam</h2>
+          </figure>
+          <div class="card-body">
+            <ul class="steps steps-vertical">
+              <li class="step step-success">Figma Design</li>
+              <li class="step step-success">Flex and Grid</li>
+              <li class="step step-success">Theme Control</li>
+              <li class="step step-success">Login/Logout From</li>
+              <li class="step step-success">Handle Card</li>
+              <li class="step step-success">Responsive Design</li>
+              <li class="step step-success">List Management</li>
+              <li class="step step-success">Input Form Handling</li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <label class="input-labels" for="name">EmaiL :</label>
-          <input
-            class="input-labels text-area"
-            type="email"
-            placeholder="Your email"
-          />
+        <div class="card bg-base-100 shadow-xl">
+          <figure class="flex flex-col gap-2">
+            <div class="avatar online">
+              <div class="w-24 rounded-full">
+                <img src="./images/About Us/tofail.png" />
+              </div>
+            </div>
+            <h2 class="card-title">Tofail Islam</h2>
+          </figure>
+          <div class="card-body">
+            <ul class="steps steps-vertical">
+              <li class="step step-success">Article Management</li>
+              <li class="step step-success">Data Management</li>
+              <li class="step step-success">Social Media information</li>
+              <li class="step step-success">Font Sizing</li>
+              <li class="step step-success">Anchor Management</li>
+              <li class="step step-success">Source Management</li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <label class="input-labels" for="location">Location :</label>
-          <select class="input-labels text-area" name="find-us" id="find-us">
-            <option value="Dhaka">Dhaka</option>
-            <option value="Chittagong" selected>Chittagong</option>
-            <option value="Khulna">Khulna</option>
-            <option value="comilla">comilla</option>
-            <option value="Rajshahi">Rajshahi</option>
-            <option value="Rongpur">Rongpur</option>
-            <option value="Noakhali">Noakhali</option>
-            <option value="Candpur">Candpur</option>
-          </select>
-        </div>
-        <div>
-          <input class="submit" type="submit" value="Submit" />
+        <div class="card bg-base-100 shadow-xl">
+          <figure class="flex flex-col gap-2">
+            <div class="avatar online">
+              <div class="w-24 rounded-full">
+                <img src="./images/About Us/shihab.png" />
+              </div>
+            </div>
+            <h2 class="card-title">Shah Alam Chowdhury</h2>
+          </figure>
+          <div class="card-body">
+            <ul class="steps steps-vertical">
+              <li class="step step-success">Image Collector</li>
+              <li class="step step-success">Handling the Size of Image</li>
+              <li class="step step-success">Font controller</li>
+              <li class="step step-success">Color Management</li>
+              <li class="step step-success">Text Size controller</li>
+              <li class="step step-success">Color Combination</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+
+    <!-- section 11: contact form  -->
+    <div class="w-9/12 mx-auto my-10">
+      <div class="stats shadow w-full">
+        <div class="stat">
+          <div class="stat-figure text-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              class="inline-block w-8 h-8 stroke-current"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              ></path>
+            </svg>
+          </div>
+          <div class="stat-title">Total Likes</div>
+          <div class="stat-value text-primary">25.6K</div>
+          <div class="stat-desc">21% more than last month</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-figure text-secondary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              class="inline-block w-8 h-8 stroke-current"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 10V3L4 14h7v7l9-11h-7z"
+              ></path>
+            </svg>
+          </div>
+          <div class="stat-title">Page Views</div>
+          <div class="stat-value text-secondary">2.6M</div>
+          <div class="stat-desc">21% more than last month</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-figure text-secondary">
+            <div class="avatar online">
+              <div class="w-16 rounded-full">
+                <img src="./images/About Us/wahid.png" />
+              </div>
+            </div>
+          </div>
+          <div class="stat-value">86%</div>
+          <div class="stat-title">Tasks done</div>
+          <div class="stat-desc text-secondary">31 tasks remaining</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- section 12: contact form 2  -->
+    <div class="w-9/12 mx-auto my-10 custom-center">
+      <div class="mockup-phone border-primary">
+        <div class="camera"></div>
+        <div class="display">
+          <div class="artboard artboard-demo phone-1">
+            <span class="my-5">Hi.</span>
+            <label class="input input-bordered flex items-center gap-2">
+              <input type="text" class="grow" placeholder="Search" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="w-4 h-4 opacity-70"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="w-4 h-4 opacity-70"
+              >
+                <path
+                  d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z"
+                />
+                <path
+                  d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z"
+                />
+              </svg>
+              <input type="text" class="grow" placeholder="Email" />
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="w-4 h-4 opacity-70"
+              >
+                <path
+                  d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z"
+                />
+              </svg>
+              <input type="text" class="grow" placeholder="Username" />
+            </label>
+            <label class="input input-bordered flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 16 16"
+                fill="currentColor"
+                class="w-4 h-4 opacity-70"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M14 6a4 4 0 0 1-4.899 3.899l-1.955 1.955a.5.5 0 0 1-.353.146H5v1.5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5v-2.293a.5.5 0 0 1 .146-.353l3.955-3.955A4 4 0 1 1 14 6Zm-4-2a.75.75 0 0 0 0 1.5.5.5 0 0 1 .5.5.75.75 0 0 0 1.5 0 2 2 0 0 0-2-2Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <input type="password" class="grow" value="password" />
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- section 13: footer area  -->
+    <div>
+      <footer class="footer p-10 bg-base-200 text-base-content">
+        <nav>
+          <h6 class="footer-title">Services</h6>
+          <a class="link link-hover">Branding</a>
+          <a class="link link-hover">Design</a>
+          <a class="link link-hover">Marketing</a>
+          <a class="link link-hover">Advertisement</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Company</h6>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact</a>
+          <a class="link link-hover">Jobs</a>
+          <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Legal</h6>
+          <a class="link link-hover">Terms of use</a>
+          <a class="link link-hover">Privacy policy</a>
+          <a class="link link-hover">Cookie policy</a>
+        </nav>
+        <form>
+          <h6 class="footer-title">Newsletter</h6>
+          <fieldset class="form-control w-80">
+            <label class="label">
+              <span class="label-text">Enter your email address</span>
+            </label>
+            <div class="join">
+              <input
+                type="text"
+                placeholder="username@site.com"
+                class="input input-bordered join-item"
+              />
+              <button class="btn btn-primary join-item">Subscribe</button>
+            </div>
+          </fieldset>
+        </form>
+      </footer>
+    </div>
   </body>
-  <!-- Section 06: footer area -->
-  <footer class="footer-area">
-    <h3>Be Helpful</h3>
-    <h6>I'm gonna do it</h6>
-  </footer>
 </html>

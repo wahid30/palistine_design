@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cupcake">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="shortcut icon" href="./images/Logo.jpg" type="image/x-icon" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- navigation bar  -->
+    <div class="navbar bg-base-100 p-10">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li><a class="nav-content" href="./index.html">Home</a></li>
+            <li><a class="nav-content">Causes</a></li>
+            <li><a class="nav-content">Give</a></li>
+            <li><a class="nav-content">Pages</a></li>
+            <li>
+              <a class="nav-content">Events</a>
+              <ul class="p-2">
+                <li><a class="nav-content">Food</a></li>
+                <li><a class="nav-content">Shelter</a></li>
+                <li><a class="nav-content">Medical</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-content">News</a></li>
+            <li><a class="nav-content">About Us</a></li>
+            <li><a class="nav-content">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="avatar">
+          <div
+            class="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2"
+          >
+            <a href="./index.html"><img src="./images/Logo.jpg" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1">
+          <li><a class="nav-content" href="./index.html">Home</a></li>
+          <li><a class="nav-content">Causes</a></li>
+          <li><a class="nav-content">Give</a></li>
+          <li><a class="nav-content">Pages</a></li>
+          <li>
+            <details>
+              <summary class="nav-content">Events</summary>
+              <ul class="p-2">
+                <li><a class="nav-content">Food</a></li>
+                <li><a class="nav-content">Shelter</a></li>
+                <li><a class="nav-content">Medical</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a class="nav-content">News</a></li>
+          <li><a class="nav-content">About Us</a></li>
+          <li><a class="nav-content">Contact</a></li>
+        </ul>
+      </div>
+      <div class="navbar-end">
+        <a href="./login.html"
+          ><button class="header-article p-5 text-3xl">Login</button></a
+        >
+      </div>
+    </div>
+
+    <!-- login form  -->
+    <div class="hero min-h-screen header-area-for-logform">
+      <div class="hero-content flex-col lg:flex-row-reverse">
+        <div class="text-center lg:text-left">
+          <h1 class="text-5xl font-bold color-white">Register now!</h1>
+          <p class="py-6 color-white">
+            Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+            excepturi exercitationem quasi. In deleniti eaque aut repudiandae et
+            a id nisi.
+          </p>
+        </div>
+        <div class="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <form class="card-body">
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Email</span>
+              </label>
+              <input
+                type="email"
+                placeholder="email"
+                class="input input-bordered"
+                required
+              />
+            </div>
+            <div class="form-control">
+              <label class="label">
+                <span class="label-text">Password</span>
+              </label>
+              <input
+                type="password"
+                placeholder="password"
+                class="input input-bordered"
+                required
+              />
+            </div>
+            <div class="form-control mt-6">
+              <button class="btn btn-primary">Register</button>
+            </div>
+            <div>
+              Don't have any account?
+              <a class="link link-error" href="./login.html">Register</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- footer  -->
+    <footer class="footer p-10 bg-base-200 text-base-content">
+      <nav>
+        <h6 class="footer-title">Services</h6>
+        <a class="link link-hover">Branding</a>
+        <a class="link link-hover">Design</a>
+        <a class="link link-hover">Marketing</a>
+        <a class="link link-hover">Advertisement</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Company</h6>
+        <a class="link link-hover">About us</a>
+        <a class="link link-hover">Contact</a>
+        <a class="link link-hover">Jobs</a>
+        <a class="link link-hover">Press kit</a>
+      </nav>
+      <nav>
+        <h6 class="footer-title">Legal</h6>
+        <a class="link link-hover">Terms of use</a>
+        <a class="link link-hover">Privacy policy</a>
+        <a class="link link-hover">Cookie policy</a>
+      </nav>
+      <form>
+        <h6 class="footer-title">Newsletter</h6>
+        <fieldset class="form-control w-80">
+          <label class="label">
+            <span class="label-text">Enter your email address</span>
+          </label>
+          <div class="join">
+            <input
+              type="text"
+              placeholder="username@site.com"
+              class="input input-bordered join-item"
+            />
+            <button class="btn btn-primary join-item">Subscribe</button>
+          </div>
+        </fieldset>
+      </form>
+    </footer>
+  </body>
+</html>
