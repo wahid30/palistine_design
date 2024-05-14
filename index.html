@@ -41,7 +41,7 @@
   </head>
   <body>
     <!-- navigation bar  -->
-    <div class="navbar bg-base-100 p-10">
+    <div class="navbar bg-base-100 p-6">
       <div class="navbar-start">
         <div class="dropdown">
           <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -146,7 +146,7 @@
 
     <!-- Section 01 : header area  -->
     <section class="header-area">
-      <h1 class="text-6xl py-16">
+      <h1 class="">
         Let's help them who<br />
         need help
       </h1>
@@ -154,7 +154,29 @@
         A single help can safe at least a single family. <br />
         So please come to help them.
       </p>
-      <button class="header-article p-5 text-3xl">Donate Now</button>
+      <button
+        class="header-article p-5 text-3xl"
+        onclick="my_modal_1.showModal()"
+      >
+        Donate Now
+      </button>
+      <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+          <h3 class="font-bold text-lg text-black-color">Welcome!!!</h3>
+          <p class="pt-2 text-black-color font-bold">
+            Please At first you should Login
+            <a class="link link-error" href="./login.html">Login</a>
+          </p>
+          <p class="py-4 text-black-color font-bold">
+            Thanks to you for being with us
+          </p>
+          <div class="modal-action justify-center">
+            <form method="dialog">
+              <button class="p-3 text-black-color">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </section>
 
     <!-- section 02: clean water,education, healthy food -->
@@ -178,7 +200,7 @@
             becomes a reality for every Palestinian community."
           </p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">Continue</button>
+            <button class="p-3">Continue</button>
           </div>
         </div>
       </div>
@@ -199,7 +221,7 @@
             stronger, more educated Palestine."
           </p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">Continue</button>
+            <button class="p-3">Continue</button>
           </div>
         </div>
       </div>
@@ -220,7 +242,7 @@
             greatest asset, so savor each bite and thrive!"
           </p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">Continue</button>
+            <button class="p-3">Continue</button>
           </div>
         </div>
       </div>
@@ -247,7 +269,7 @@
             you for your compassion and generosity
           </p>
           <div class="card-actions justify-end">
-            <button class="btn btn-primary">Continue</button>
+            <button class="p-3">Continue</button>
           </div>
         </div>
       </div>
@@ -322,7 +344,9 @@
           placeholder="Other Amount(Taka)"
         />
         <br />
-        <p class="btn btn-info font-bold">Donate Now</p>
+        <a href="./ssl.html">
+          <button class="p-3">Donate Now</button>
+        </a>
       </div>
     </section>
 
@@ -781,7 +805,7 @@
               <li class="step step-success">Figma Design</li>
               <li class="step step-success">Flex and Grid</li>
               <li class="step step-success">Theme Control</li>
-              <li class="step step-success">Login/Logout From</li>
+              <li class="step step-success">Login/Logout Form</li>
               <li class="step step-success">Handle Card</li>
               <li class="step step-success">Responsive Design</li>
               <li class="step step-success">List Management</li>
@@ -840,13 +864,13 @@
           </figure>
           <div class="card-body">
             <ul class="steps steps-vertical">
-              <li class="step step-success">
-                Secondary Website Link collector
-              </li>
+              <li class="step step-success">Login/Logout Management</li>
               <li class="step step-success">Subscription Management</li>
               <li class="step step-success">Event Management</li>
-              <li class="step step-success">Forum Management</li>
-              <li class="step step-success">Background Color Management</li>
+              <li class="step step-success">Navigation Handler</li>
+              <li class="step step-success">
+                Dynamic Indicator On Subscription
+              </li>
               <li class="step step-success">Effect Controller</li>
             </ul>
           </div>
@@ -984,6 +1008,84 @@
         </div>
       </div>
     </div>
+    <!-- chatBot  -->
+    <div class="avatar avatarParent">
+      <div div class="w-24 rounded-full chatBot">
+        <a class="cursor-pointer" onclick="my_modal_4.showModal()">
+          <img src="./images/chatBot/bot.jpeg" />
+        </a>
+      </div>
+      <!-- You can open the modal using ID.showModal() method -->
+
+      <dialog id="my_modal_4" class="modal">
+        <div class="modal-box w-11/12 max-w-5xl">
+          <div>
+            <div class="chat chat-start">
+              <div class="chat-image avatar">
+                <div class="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS chat bubble component"
+                    src="./images/chatBot/bot.jpeg"
+                  />
+                </div>
+              </div>
+              <div class="chat-bubble">
+                Welcome to our community of change-makers! 🌟
+              </div>
+            </div>
+            <div class="chat chat-start">
+              <div class="chat-image avatar">
+                <div class="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS chat bubble component"
+                    src="./images/chatBot/bot.jpeg"
+                  />
+                </div>
+              </div>
+              <div class="chat-bubble">
+                Thank you for joining us on our mission to make a difference.
+              </div>
+            </div>
+            <div class="chat chat-start">
+              <div class="chat-image avatar">
+                <div class="w-10 rounded-full">
+                  <img
+                    alt="Tailwind CSS chat bubble component"
+                    src="./images/chatBot/bot.jpeg"
+                  />
+                </div>
+              </div>
+              <div class="chat-bubble">
+                our generosity is the heartbeat of our organization, and
+                together, we're creating positive impact worldwide. Let's embark
+                on this journey of giving and compassion together. Welcome
+                aboard!
+              </div>
+            </div>
+          </div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button, it will close the modal -->
+              <button class="p-3">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </div>
+
+    <!-- world map  -->
+    <div>
+      <iframe
+        class="w-full"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d867283.0224191946!2d34.2326948825783!3d31.88419366042253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151cf2d28866bdd9%3A0xee17a001d166f686!2sPalestine!5e0!3m2!1sen!2sbd!4v1715719365571!5m2!1sen!2sbd"
+        width="600"
+        height="600"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
     <!-- section 13: footer area  -->
     <div>
       <footer class="footer p-10 bg-base-200 text-base-content">
@@ -1019,7 +1121,7 @@
                 placeholder="username@site.com"
                 class="input input-bordered join-item"
               />
-              <button class="btn btn-primary join-item">Subscribe</button>
+              <button class="btn btn-error join-item">Subscribe</button>
             </div>
           </fieldset>
         </form>

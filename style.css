@@ -64,6 +64,10 @@ h6 {
   color: white;
 }
 
+.text-black-color {
+  color: black;
+}
+
 .header-area-for-logform {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), #000),
     url(./images/donation13.png);
@@ -82,9 +86,28 @@ h6 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  /* height: 100vh; */
   color: white;
 }
+
+.header-area-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+/* for mobile device  */
+/* @media only screen and (max-width: 576px) {
+  .header-area-h1 h1 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 992px) {
+  .header-area-flex {
+    display: flex;
+    flex-direction: column;
+  }
+} */
 
 .header-area h1 {
   font-size: 70px;
@@ -94,6 +117,10 @@ h6 {
 
 .header-article {
   margin-top: 20px;
+}
+
+.header-button {
+  padding: 15px;
 }
 
 /* Section 02 : donate-today-area */
@@ -304,4 +331,29 @@ select {
 
   justify-items: center;
   gap: 10px;
+}
+
+.avatarParent {
+  width: 100%;
+  height: 100%;
+  position: relative; /* Set position to relative to use absolute positioning inside */
+}
+
+.chatBot {
+  width: 120px; /* Set the width of the image */
+  height: auto; /* Maintain aspect ratio */
+  position: absolute; /* Set position to absolute */
+  top: -120px; /* Position from top */
+  left: 0; /* Initially position to the left */
+  transition: left 0.5s ease; /* Add transition effect for smooth movement */
+  animation: moveRight 4s forwards; /* Animation to move image from left to right */
+}
+
+@keyframes moveRight {
+  0% {
+    left: 0;
+  } /* Starting position */
+  100% {
+    left: calc(100% - 200px);
+  } /* Ending position */
 }
